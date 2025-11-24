@@ -1,42 +1,76 @@
 >> % p1(s) = s^3 + 5*s^2 + 3*s + 10
 >> % p2(s) = s^4 + 7*s^3 + 5*s^2 + 8*s + 15
 >> % p3(s) = s^5 + 15*s^4 + 10*s^3 + 6*s^2 + 3*s + 9
->> % Tentukan p1 dan p2 s = 2, p3 s = 3
+>> % Tentukan value p1 dan p2 s = 2, p3 s = 3
+
+>> % BAGIAN A
 >> % soal p1
 >> p1 = [ 1 5 3 10 ]
-
 p1 =
 
      1     5     3    10
 
 >> pvalue = polyval(p1,2)
-
 pvalue =
 
     44
 
 >> % soal p2
 >> p2 = [ 1 7 5 8 15 ]
-
 p2 =
 
      1     7     5     8    15
 
 >> pvalue = polyval(p2,2)
-
 pvalue =
 
    123
 
 >> % soal p3
 >> p3 = [ 1 15 10 6 3 9 ]
-
 p3 =
 
      1    15    10     6     3     9
 
 >> pvalue = polyval(p3,3)
-
 pvalue =
 
         1800
+
+>> % BAGIAN B
+>> p1 = [ 1 5 3 10 ]
+p1 =
+
+     1     5     3    10
+
+>> p2 = [ 1 7 5 8 15 ]
+p2 =
+
+     1     7     5     8    15
+
+>> p3 = [ 1 15 10 6 3 9 ]
+p3 =
+
+     1    15    10     6     3     9
+
+>> k1 = conv(p1,p2)
+k1 =
+
+     1    12    43    64   140   149   125   150
+
+>> k2 = conv (k1,p3)
+k2 =
+
+  Columns 1 through 12
+
+           1          27         233         835        1605        3192        4381        4934        5390        3957        2616        1575
+
+  Column 13
+
+        1350
+
+>> % BAGIAN C
+>> p = deconv(k1,p3)
+p =
+
+     1    -3    78
