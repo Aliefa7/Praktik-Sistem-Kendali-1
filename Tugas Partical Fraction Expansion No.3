@@ -1,0 +1,23 @@
+>> syms s t
+>> % JAWABAN NOMOR 3
+>> % soal 3 (a)
+>>  fs = 7 / (s^2 + 5*s + 6)
+fs =
+ 
+7/(s^2 + 5*s + 6)
+ 
+>> ft = ilaplace(fs)
+ft =
+ 
+7*exp(-2*t) - 7*exp(-3*t)
+
+>> % soal 3 (b)
+>> fs2 = 15 / ( s^3 + 5*s^2 + 11*s + 10)
+fs2 =
+ 
+15/(s^3 + 5*s^2 + 11*s + 10)
+ 
+>> ft2 = ilaplace(fs2)
+ft2 =
+ 
+5*exp(-2*t) - 5*exp(-(3*t)/2)*(cos((11^(1/2)*t)/2) - (11^(1/2)*sin((11^(1/2)*t)/2))/11)
