@@ -11,8 +11,8 @@ sys =
  
 Continuous-time transfer function.
 Model Properties
->> sys_zpk = zpk(sys)
 
+>> sys_zpk = zpk(sys)
 sys_zpk =
  
          (s+1)
