@@ -185,6 +185,7 @@ Continuous-time zero/pole/gain model.
 Model Properties
 
 
+
 ======== NOMOR 4 ========
 >> Fs = 10^4 * conv([1 15], [1 70]);
 >> den = conv([1 0], conv([1 55], conv([1 7 110], [1 6 95])));
@@ -241,6 +242,7 @@ k =
      []
 
 
+
 ======== Nomor 5 ========
 ( BAGIAN A )
 >> numGa = 45* conv([1 37 74], [1 28 32 16]);
@@ -258,7 +260,8 @@ num/den =
 ( MENUNJUKAN NILAI BENTUK POLYNOMIAL DAN TERFAKTOR )
 >> syms s;
 >> Ga = 45* [ ( s^2 + 37*s + 74 ) * ( s^3 + 28*s^2 + 32*s + 16 ) ] / [ ( s + 39 )*( s + 47 )*( s^2 + 2*s + 100 )*( s^3 + 27*s^2 + 18*s +15 ) ];
->> % Ga symbolik
+
+>> GA SIMBOLIK
 >> pretty(Ga)
 
           2                3       2
@@ -273,8 +276,6 @@ num/den =
 
 >> % RASIO POLYNOMIAL
 >> Ga = tf(numGa,denGa)
-
-
 Ga =
  
                45 s^5 + 2925 s^4 + 51390 s^3 + 147240 s^2 + 133200 s + 53280
@@ -286,7 +287,6 @@ Model Properties
 
 >> % RASIO TERFAKTOR
 >> Ga = zpk(Ga)
-
 Ga =
  
        45 (s+34.88) (s+26.83) (s+2.122) (s^2 + 1.17s + 0.5964)
@@ -305,6 +305,7 @@ Model Properties
 
 >> GB SIMBOLIK
 >> pretty(Gb)
+
                       3       2
            (s + 14) (s  + 49 s  + 62 s + 53) 56
 ----------------------------------------------------------
