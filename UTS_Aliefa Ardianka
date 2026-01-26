@@ -69,8 +69,21 @@ x =
 
 
 >> % --- NOMOR 3 ---
+>> T = 5;
+>> a = -1/T;
+>> t = [0;1;25];
+>> x = 1;
+>> xt = exp(a*t)*x
+xt =
 
+    1.0000
+    0.8187
+    0.0067
 
+>> plot(t,xt)
+>> grid on
+>> xlabel('Time')
+>> ylabel('xt')
 
 
 
