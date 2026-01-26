@@ -325,3 +325,81 @@ Model Properties
 >> grid on
 
 >> % --- NOMOR 9 ---
+>> k = 4;
+c = 6;
+m = 6;
+a = [ 0 1; -k/m -c/m];
+b = [ 0; 1/m];
+Ts = 2;
+>> c = [ 1 0 ];
+d = [ 0 ];
+
+>> sys = ss(a,b,c,d)
+sys =
+ 
+  A = 
+            x1       x2
+   x1        0        1
+   x2  -0.6667       -1
+ 
+  B = 
+           u1
+   x1       0
+   x2  0.1667
+ 
+  C = 
+       x1  x2
+   y1   1   0
+ 
+  D = 
+       u1
+   y1   0
+ 
+Continuous-time state-space model.
+Model Properties
+
+
+>> % --- NOMOR 10 ---
+>> k = 50;
+>> c = 1;
+>> m = 1;
+>> a = [ 0 1; -k/m -c/m];
+>> b = [ 0; 1/m];
+>> Ts = 2;
+>> c = [ 1 0 ];
+d = [ 0 ];
+>> sys = ss(a,b,c,d)
+sys =
+ 
+  A = 
+        x1   x2
+   x1    0    1
+   x2  -50   -1
+ 
+  B = 
+       u1
+   x1   0
+   x2   1
+ 
+  C = 
+       x1  x2
+   y1   1   0
+ 
+  D = 
+       u1
+   y1   0
+ 
+Continuous-time state-space model.
+Model Properties
+
+>> tf = tf(sys)
+tf =
+ 
+       1
+  ------------
+  s^2 + s + 50
+ 
+Continuous-time transfer function.
+Model Properties
+>> step(sys)
+>> grid on
